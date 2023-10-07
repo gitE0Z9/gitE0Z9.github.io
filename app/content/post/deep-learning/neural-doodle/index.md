@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Pytorch實作系列 — Neural Doodle"
-description: "Neural Doodle由Alex提出，主要用途是透過patch-based style transfer將風格遷移到使用者繪製的模板。"
+description: "Neural Doodle由Alex(2016)提出，主要用途是透過patch-based style transfer將風格遷移到使用者繪製的模板。"
 date: 2021-08-16T14:59:15+08:00
 image: "art.png"
 author: "Mike Bai"
