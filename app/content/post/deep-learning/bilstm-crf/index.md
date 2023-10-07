@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Pytorch實作系列 — BiLSTM-CRF"
-description: "BiLSTM-CRF由Huang提出，用於命名實體識別(NER)任務中。相較BiLSTM，增加CRF層使得網路得以學習tag與tag間的條件機率"
+description: "BiLSTM-CRF由Huang(2015)提出，用於命名實體識別(NER)任務中。相較BiLSTM，增加CRF層使得網路得以學習tag與tag間的條件機率"
 date: 2021-08-14T13:02:03+08:00
 image: "concept.png"
 author: "Mike Bai"
@@ -70,4 +70,6 @@ BiLSTM-CRF 是由Huang et al.(2015)在論文 *Bidirectional LSTM-CRF Models for 
 
 * [pytorch tutorial](https://pytorch.org/tutorials/beginner/nlp/advanced_tutorial.html)
 
-* [original github repo](https://github.com/SkyAndCloud/bilstm_crf_sequence_labeling_pytorch)
+* [another github repo](https://github.com/SkyAndCloud/bilstm_crf_sequence_labeling_pytorch)
+
+* [paper](https://arxiv.org/abs/1508.01991)
