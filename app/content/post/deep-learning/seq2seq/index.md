@@ -2,7 +2,7 @@
 layout: post
 title: "Pytorch實作系列 —  Seq2seq"
 description: "Seq2seq 是由Sutskever et al.(2014)提出，結合編碼與解碼的概念，使LSTM可以處理更廣泛的自然語言任務，是現代NLP的經典架構。"
-date: 2021-08-14T13:14:52+08:00
+date: 2020-12-17T08:30:38.538Z
 image: "concept.png"
 author: "Mike Bai"
 tags:

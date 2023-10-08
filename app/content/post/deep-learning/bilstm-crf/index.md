@@ -2,7 +2,7 @@
 layout: post
 title: "Pytorch實作系列 — BiLSTM-CRF"
 description: "BiLSTM-CRF由Huang et al.(2015)提出，用於命名實體識別(NER)任務中。相較BiLSTM，增加CRF層使得網路得以學習tag與tag間的條件機率"
-date: 2021-08-14T13:02:03+08:00
+date: 2021-08-14T12:54:22.042Z
 image: "concept.png"
 author: "Mike Bai"
 tags:
