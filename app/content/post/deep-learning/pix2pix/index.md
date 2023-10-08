@@ -16,7 +16,7 @@ published: true
 
 ## 簡介
 
-pix2pix是由Isola et al.(2016)在 * Image-to-Image Translation with Conditional Adversarial Networks * 提出，是圖像轉圖像的經典作品。
+pix2pix是由Isola et al.(2016)在 *Image-to-Image Translation with Conditional Adversarial Networks* 提出，是圖像轉圖像的經典作品。
 
 ## 資料集
 
