@@ -5,7 +5,8 @@ date: 2020-12-13T08:59:19.337Z
 image: "network.webp"
 author: "Mike Bai"
 tags:
-    - few shot learning
+    - computer vision
+    - segmentic segmentation
 categories:
     - deep-learning
     - pytorch

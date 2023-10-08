@@ -5,8 +5,8 @@ date: 2020-12-13T12:35:12.218Z
 image: "network.webp"
 author: "Mike Bai"
 tags:
-    - neural language processing
-    - named entity recognition
+    - computer vision
+    - generative model
 categories:
     - deep-learning
     - pytorch

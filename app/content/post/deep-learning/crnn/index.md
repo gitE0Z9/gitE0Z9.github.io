@@ -5,7 +5,8 @@ date: 2022-12-26T16:39:45.106Z
 image: "network.webp"
 author: "Mike Bai"
 tags:
-    - few shot learning
+    - computer vision
+    - optical character recognition
 categories:
     - deep-learning
     - pytorch

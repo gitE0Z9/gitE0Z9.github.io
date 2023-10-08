@@ -5,7 +5,8 @@ date: 2020-12-14T03:37:01.984Z
 image: "result.webp"
 author: "Mike Bai"
 tags:
-    - few shot learning
+    - time forecasting
+    - sequential modeling
 categories:
     - deep-learning
     - pytorch
