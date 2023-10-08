@@ -1,6 +1,6 @@
 ---
-title: "Pytorch實作系列 — Temporal convolutional network"
-description: "時序卷積網路是由 Lea et al.(2017)提出，成為卷積神經網路在序列資料的代表模型之一。設計概念是經由卷積的滑窗特性達到序列建模的性質，同時藉由遮掩未來訊息達到因果(causal)性質，也就是未來不影響現在。"
+title: "Pytorch實作系列 — TCN"
+description: "TCN是由 Lea et al.(2017)提出，成為卷積神經網路在序列資料的代表模型之一。設計概念是經由卷積的滑窗特性達到序列建模的性質，同時藉由遮掩未來訊息達到因果(causal)性質，也就是未來不影響現在。"
 date: 2020-12-14T03:37:01.984Z
 image: "result.webp"
 author: "Mike Bai"
@@ -14,7 +14,7 @@ published: true
 
 ## 簡介
 
-時序卷積網路是由 Lea et al.(2017)在 *Temporal Convolutional Networks: A Unified Approach to Action Segmentation* 提出，成為卷積神經網路在序列資料的代表模型之一。
+TCN 是由 Lea et al.(2017)在 *Temporal Convolutional Networks: A Unified Approach to Action Segmentation* 提出，成為卷積神經網路在序列資料的代表模型之一。
 
 ## 資料集
 
