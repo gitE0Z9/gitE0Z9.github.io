@@ -3,7 +3,7 @@ layout: post
 title: "Pytorch實作系列 —  FCN"
 description: "全卷積網路(Fully Convolutional Network)是由Long et al.(2014)提出，主要用於像素級任務，如語意分割。設計概念是用上採樣的方式恢復下採樣的特徵圖達到不同層級特徵圖的融合，同時提升類神經網路的特徵抽取能力。"
 date: 2020-12-17T06:02:33.059Z
-image: "concept.png"
+image: "result.png"
 author: "Mike Bai"
 tags:
     - computer vision
@@ -38,7 +38,13 @@ PASCAL VOC 2012，一個著名的影像資料集，包含物件偵測和語意�
 
 ## 評估
 
-![結果](result.png)
+使用dice coefficient評估訓練集得到0.33
+
+![dice coefficients](eval.png)
+
+## 展示
+
+![woman from https://www.pexels.com/photo/woman-holding-disposable-cup-712513/](result.png)
 
 ## 代碼連結
 
