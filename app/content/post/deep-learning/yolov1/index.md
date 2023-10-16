@@ -17,13 +17,13 @@ published: true
 
 > Hope this article can help you avoid getting trapped by annoying and terrible bugs.
 
-**1. Object detection**
+## Object detection
 
 Why do we need object detection when we already have image classification? The reason is that in an image, there can be multiple objects of interest, and we want to determine both their classes and their locations simultaneously.
 
 ![from: https://pjreddie.com/darknet/yolo/](cover.webp)
 
-**2. The idea of YOLOv1**
+## The idea of YOLOv1
 
 YOLOv1 is designed to do object detection by extracting features from images with convolution neural network only once, just its name implies. This distinction arises from the comparison between YOLO and other two-stage detectors, which require multiple feature extraction steps.
 
@@ -39,7 +39,7 @@ This model outputs a 7x7 grid feature map with 30 channels. These channels conta
 
 ![basic idea about how to do prediction](concept.webp)
 
-**3. Localization**
+### Localization
 
 The localization can be approached from the loss function and the label creation.
 
@@ -57,7 +57,7 @@ Consider if we were to directly use the x and y center coordinates of a bounding
 
 ![YOLOv1 loss](formula.webp)
 
-**3.5. Objectness**
+### Objectness
 
 The introduction of indicator functions is crucial, and there are three types of them:
 
@@ -72,15 +72,13 @@ Using Intersection over Union (IOU) as the objectness measure can result in a 10
 
 ![Pr(Object) is not estimated explicitly.](prob-formula.webp)
 
-**4. Classification**
+### Classification
 
 Either use softmax for multiclass prediction (where classes are mutually exclusive) or Bernoulli log likelihood (where each class is independent, and each class has its own probability).
 
-**5. Implementation**
+## Implementation
 
-https://github.com/gitE0Z9/pytorch-implemenations
-
-- **Compared to the original implementation**
+### Compared to the original implementation
 
 Didn’t implement
 
@@ -94,11 +92,11 @@ What change
 
 ---
 
-- **Training Dataset**
+### Training Dataset
 
 VOC 2012 trainval.
 
-- **Build the model**
+### Build the model
 
 I adhered to the network design described in the paper, with the only difference being the replacement of the final fully connected layer with a 1x1 convolutional layer.
 
@@ -106,7 +104,7 @@ I adhered to the network design described in the paper, with the only difference
 
 #Edit: The backbone is also replaced with torchvision’s pretrained Resnet. Training a YOLOv1 classifier on ImageNet would take approximately a month QQ.
 
-- **Loss function**
+### Loss function
 
 Performing a **square root** operation on the height and width can introduce the risk of gradient vanishing. To mitigate this, it’s necessary to add a small epsilon (a tiny number) before taking the square root.
 
@@ -114,11 +112,11 @@ I employed Aladdin’s method to address the issue of gradients with widths and 
 
 I also attempted Darknet’s approach to address this issue. They directly predict the square root of the width and height of bounding boxes, and then square these predictions during IOU computation. However, I encountered difficulties in training convergence, even when incorporating their best Root Mean Square Error (RMSE) selection technique. Additionally, this approach makes IOU less meaningful for matching.
 
-- **Data Augmentation**
+### Data Augmentation
 
 I applied [Albumentation’s](https://github.com/albumentations-team/albumentations) color jitter, horizontal flip, and shift-scale-rotate transformations, each with a probability of 0.5 and default scaling. These transformations resulted in a 10% increase in mean Average Precision (mAP) compared to not using them, and they also improved the quality of the bounding boxes.
 
-- **Training**
+### Training
 
 After setting up the dataset, network, and loss function, the training process begins — a seemingly endless cycle of experiments and debugging.
 
@@ -132,11 +130,11 @@ Resnet34 model is about 209MB.
 
 ------
 
-- **Decode output**
+### Decode output
 
 YOLOv1 outputs a 7x7x30 feature map, which is then reshaped to 98x25 for easier post-processing. While YOLOv1 provides two bounding boxes for position information, it shares class information. Sharing class information is not seen in later version of YOLO.
 
-- **Postprocessing**
+### Postprocessing
 
 ![the main trick to clean predictions](nms.webp)
 
@@ -144,15 +142,15 @@ Greedy Non-Maximum Suppression (NMS) is employed to clean up overlapping boundin
 
 One important lesson to remember is that this operation should be performed separately for predictions of the same class.
 
-- **Probability**
+### Probability
 
 Multiply conditional class probability with object confidence to get marginal class probability.
 
-- **Validation Dataset**
+### Validation Dataset
 
 VOC 2007 test.
 
-- **Evaluation metric**
+### Evaluation metric
 
 Mean average precision is a metric to measure how well an object detector performs. We split this term into three words to explain.
 
@@ -180,7 +178,7 @@ It’s a valid question, and the reason is somewhat similar to why we use ROC cu
 
 If you were to try accuracy(cat) = #detections over IOU / #cats, you’d encounter issues with different denominators across different classes, making them not directly comparable. Additionally, the number of predicted bounding boxes might differ from the number of ground truths, further complicating the accuracy calculation.
 
-- **Evaluation**
+## Evaluation
 
 mAP is calculated across the dataset in a manner similar to how we calculate accuracy, but it’s done separately for each class. The list below represents the Area Under the Curve (AUC) of the interpolated Precision-Recall curve for each class.
 
@@ -203,7 +201,7 @@ Compared to the original mAP in the paper, which was 63.4, I achieved 52.4 mAP f
 
 ![red: resnet34, blue: resnet18](backbone-compare.webp)
 
-**Demo**
+### Demo
 
 Detections from 0 to 100 epochs on trainset.
 
@@ -218,7 +216,7 @@ Detections from 0 to 100 epochs on trainset.
 ![](demo-5.webp)
 
 
-**Note**
+## Note
 
 1. It looks like the model can identify more objects than provided labels, , and it’s constrained by the available labels.
 
@@ -232,7 +230,10 @@ Detections from 0 to 100 epochs on trainset.
 
 6. The default alpha value for the leaky ReLU in PyTorch is 0.01. I set it to 0.1, as otherwise, the network may output the same tensor every time, leading to degeneration.
 
-**Reference**
+## Code
+
+[My GitHub](https://github.com/gitE0Z9/pytorch-implemenations/tree/main/object/detection/library)
+## Reference
 
 [aladdin's github repo](https://github.com/aladdinpersson/Machine-Learning-Collection/tree/master/ML/Pytorch/object_detection/YOLO)
 
