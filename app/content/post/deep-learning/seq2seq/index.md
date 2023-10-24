@@ -6,7 +6,7 @@ date: 2020-12-17T08:30:38.538Z
 image: "concept.png"
 author: "Mike Bai"
 tags:
-    - neural language processing
+    - natural language processing
     - machine translation
 categories:
     - deep-learning

@@ -6,7 +6,7 @@ date: 2021-08-14T12:54:22.042Z
 image: "concept.png"
 author: "Mike Bai"
 tags:
-    - neural language processing
+    - natural language processing
     - named entity recognition
 categories:
     - deep-learning

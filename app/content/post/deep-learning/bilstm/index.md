@@ -6,7 +6,7 @@ date: 2020-12-16T13:54:24.038Z
 image: "concept.png"
 author: "Mike Bai"
 tags:
-    - neural language processing
+    - natural language processing
     - POS tagging
 categories:
     - deep-learning

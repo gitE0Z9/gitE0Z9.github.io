@@ -5,6 +5,7 @@ date: 2020-12-04T07:55:26.422Z
 image: "network.webp"
 author: "Mike Bai"
 tags:
+    - natural language processing
     - text classification
 categories:
     - deep-learning
