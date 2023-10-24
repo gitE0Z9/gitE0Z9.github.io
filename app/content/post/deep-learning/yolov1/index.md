@@ -6,7 +6,7 @@ image: "cover.webp"
 author: "Mike Bai"
 tags:
     - computer vision
-    - object-detection
+    - object detection
 categories:
     - object-detection
     - deep-learning
