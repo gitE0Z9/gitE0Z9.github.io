@@ -36,6 +36,8 @@ ResNet 是由He et al.(2015)在 *Deep Residual Learning for Image Recognition* �
 
 訓練時間長達每個回合20分鐘。
 
+加入Batch Normalization和ReLU後速度加快且模型大小減少一半以上。
+
 ## 代碼連結
 
 * [github repo](https://github.com/gitE0Z9/classical-network-series)
