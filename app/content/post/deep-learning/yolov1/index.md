@@ -106,11 +106,9 @@ I adhered to the network design described in the paper, with the only difference
 
 ### Loss function
 
-Performing a **square root** operation on the height and width can introduce the risk of gradient vanishing. To mitigate this, it’s necessary to add a small epsilon (a tiny number) before taking the square root.
+Performing a square root operation on the height and width can introduce the risk of a numerical instability issue. To mitigate this, it's necessary to add an epsilon (a tiny number) before taking the square root. I used the trick of squaring and then adding epsilon before taking the square root.
 
-I employed Aladdin’s method to address the issue of gradients with widths and heights less than or equal to zero. His approach involves shifting the gradient by 2 during the first layer’s backpropagation. Ignoring the sign outside, this gradient shift results in a reverse direction. If we were to clamp the gradient directly, only predictions larger than epsilon would be learned, potentially leading to information loss.
-
-I also attempted Darknet’s approach to address this issue. They directly predict the square root of the width and height of bounding boxes, and then square these predictions during IOU computation. However, I encountered difficulties in training convergence, even when incorporating their best Root Mean Square Error (RMSE) selection technique. Additionally, this approach makes IOU less meaningful for matching.
+I also attempted Darknet's approach to address this issue. They directly predict the square root of the width and height of bounding boxes, and then square these predictions during IOU computation. However, I encountered difficulties in training convergence, even when incorporating their best Root Mean Square Error (RMSE) selection technique.
 
 ### Data Augmentation
 
