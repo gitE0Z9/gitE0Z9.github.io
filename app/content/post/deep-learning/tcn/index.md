@@ -15,7 +15,7 @@ published: true
 
 ## 簡介
 
-TCN 是由 Lea et al.(2017)在 *Temporal Convolutional Networks: A Unified Approach to Action Segmentation* 提出，成為卷積神經網路在序列資料的代表模型之一。
+TCN 是由 Lea et al.(2017)在 *Temporal Convolutional Networks for Action Segmentation and Detection* 提出，成為卷積神經網路在序列資料的代表模型之一。
 
 ## 資料集
 
@@ -53,4 +53,4 @@ dilated convolution 要注意dilation size, padding size, slice。
 
 * [original github repo](https://github.com/locuslab/TCN)
 
-* [paper](https://arxiv.org/abs/1608.08242)
+* [paper](https://arxiv.org/abs/1611.05267)
