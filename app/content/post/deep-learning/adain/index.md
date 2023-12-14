@@ -1,5 +1,5 @@
 ---
-title: "Pytorch 實作系列 — AdaIN"
+title: "Pytorch DIY — AdaIN"
 description: "AdaIN 由 Huang et al.(2017)提出，藉由instance normalization擴展類神經網路的風格遷移能力能夠學習任意的風格圖片，並藉由Fast style transfer架構達到最快的推論速度。"
 date: 2023-11-18T15:45:01.679Z
 image: "transferred.webp"

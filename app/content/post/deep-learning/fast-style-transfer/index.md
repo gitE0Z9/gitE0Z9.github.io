@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Pytorch 實作系列 — Fast style transfer"
+title: "Pytorch DIY — Fast style transfer"
 description: "Fast style transfer 由 Justin Johnson et al. (2016)提出，主要特點在於將Gatys 的風格遷移模型從迭代更新圖片的方式轉為以類神經網路學習特定的一種風格，從而節省推論時間，不需要再對每個圖片對做訓練，甚至能生成高解析度影像。"
 date: 2021-08-16T10:04:20.878Z
 image: "transform-house.webp"

@@ -1,5 +1,5 @@
 ---
-title: "Pytorch 實作系列 — Neural style transfer"
+title: "Pytorch DIY — Neural style transfer"
 description: "圖像風格遷移由Gatys et al.(2016)提出，是最早使圖片能變換成另一張圖片風格的深度學習技術之一。"
 date: 2020-12-10T14:02:33.883Z
 image: "output.png"
