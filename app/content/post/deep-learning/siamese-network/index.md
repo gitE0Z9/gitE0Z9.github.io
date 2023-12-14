@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Pytorch實作系列 —  Siamese network"
+title: "Pytorch DIY —  Siamese network"
 description: "孿生網路是由 Koch et al. (2015)提出，用於解決 one shot 圖片辨認的問題: 如何在只看過一個樣本的情況下學會分類該類別的圖片。"
 date: 2020-11-30T12:56:37.827Z
 image: "concept.webp"

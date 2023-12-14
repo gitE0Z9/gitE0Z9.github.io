@@ -1,5 +1,5 @@
 ---
-title: "Pytorch實作系列 — DQN"
+title: "Pytorch DIY — DQN"
 description: "Deep Q Learning 是由Mnih et al.(2014)提出，可以說是第一個將增強學習與深度學習結合的經典範例。"
 date: 2020-12-07T13:47:35.464Z
 image: "concept.webp"

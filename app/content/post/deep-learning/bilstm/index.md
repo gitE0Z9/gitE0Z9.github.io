@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Pytorch實作系列 — BiLSTM"
+title: "Pytorch DIY — BiLSTM"
 description: "雙向 LSTM(bidirectional LSTM)是由Schuster et al.(1997)提出，其概念類似於人類並不只從前向後地了解序列資料，也能從後向前兩個方向取得表徵。"
 date: 2020-12-16T13:54:24.038Z
 image: "concept.png"

@@ -1,5 +1,5 @@
 ---
-title: "Pytorch實作系列 — UNet"
+title: "Pytorch DIY — UNet"
 description: "UNet是由Ronneberger et al.(2015)提出，作為醫學領域上常用的分割網路。根據論文內容，可以使用少樣本學習、處理高解析度影像、特別是針對醫療影像的切割。"
 date: 2020-12-13T08:59:19.337Z
 image: "network.webp"

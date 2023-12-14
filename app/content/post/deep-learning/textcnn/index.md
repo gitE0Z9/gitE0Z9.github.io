@@ -1,5 +1,5 @@
 ---
-title: "Pytorch實作系列 — TextCNN"
+title: "Pytorch DIY — TextCNN"
 description: "TextCNN由 Kim et al.(2014)提出，是以卷積網路處理文本的開山之作。"
 date: 2020-12-04T07:55:26.422Z
 image: "network.webp"

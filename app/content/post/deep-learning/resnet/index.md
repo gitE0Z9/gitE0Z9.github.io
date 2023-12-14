@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Pytorch實作系列 —  ResNet"
+title: "Pytorch DIY —  ResNet"
 description: "ResNet 是由He et al.(2015)提出，如今已成為最廣為使用的卷積網路骨架，可見其不小的影響力。而使其擁有如此突破的原因莫過於殘差結構，相較於一般的卷積網路，殘差連接使梯度能夠在較深的網路傳遞順暢，減少因梯度消失或突增導致的數值不穩定性。"
 date: 2020-12-04T15:31:02.395Z
 image: "network.webp"

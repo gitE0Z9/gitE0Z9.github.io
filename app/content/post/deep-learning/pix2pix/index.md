@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Pytorch實作系列 — Pix2pix"
+title: "Pytorch DIY — Pix2pix"
 description: "pix2pix是由Isola et al.(2016)年提出，是圖像轉圖像的經典作品。"
 date: 2020-12-15T06:48:29.934Z
 image: "dataset.png"

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Pytorch實作系列 —  FCN"
+title: "Pytorch DIY —  FCN"
 description: "全卷積網路(Fully Convolutional Network)是由Long et al.(2014)提出，主要用於像素級任務，如語意分割。設計概念是用上採樣的方式恢復下採樣的特徵圖達到不同層級特徵圖的融合，同時提升類神經網路的特徵抽取能力。"
 date: 2020-12-17T06:02:33.059Z
 image: "result.png"

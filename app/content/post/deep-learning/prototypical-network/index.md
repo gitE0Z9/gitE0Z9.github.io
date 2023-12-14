@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Pytorch實作系列 —  Prototypical network"
+title: "Pytorch DIY —  Prototypical network"
 description: "原型網路是由Snell et al.(2017)提出，用於解決few shot learning，同領域還有Siamese network, Matching Network等作品。"
 date: 2020-12-15T06:57:52.982Z
 image: "concept.webp"

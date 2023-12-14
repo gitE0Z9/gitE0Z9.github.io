@@ -1,5 +1,5 @@
 ---
-title: "Pytorch實作系列 — DCGAN"
+title: "Pytorch DIY — DCGAN"
 description: "DCGAN是由Radford et al.(2015)提出，是結合CNN和GAN的經典範例，提升GAN對應的資訊層次，不再只限於過往的線性層，還能包含卷積層的訊息。"
 date: 2020-12-13T12:35:12.218Z
 image: "network.webp"

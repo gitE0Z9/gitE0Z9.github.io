@@ -1,5 +1,5 @@
 ---
-title: "Pytorch實作系列 — GAN"
+title: "Pytorch DIY — GAN"
 description: "生成對抗網路由 Goodfellow et al.(2014)提出，是一種廣為人知的生成模型架構，曾被使用在AlphaGo的設計理念中。"
 date: 2020-12-06T11:35:49.646Z
 image: "concept.webp"

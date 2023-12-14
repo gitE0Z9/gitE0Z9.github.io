@@ -1,5 +1,5 @@
 ---
-title: "Pytorch實作系列 — VAE"
+title: "Pytorch DIY — VAE"
 description: "變分自編碼機是由Kingma et al.(2013)提出，可視為一種生成模型的架構。"
 date: 2020-12-01T08:21:31.742Z
 image: "concept.webp"

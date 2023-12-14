@@ -1,5 +1,5 @@
 ---
-title: "Pytorch實作系列 — LSTM"
+title: "Pytorch DIY — LSTM"
 description: "長短期記憶是由Hochreiter et al.(1997)提出，主要用於序列資料的處理，曾經獲得廣泛的使用與研究，所屬的遞歸類神經網路與卷積類神經網路並列深度學習領域的代表，直到注意力機制出現後逐漸淡出。"
 date: 2020-12-03T14:08:48.766Z
 image: "network.webp"
