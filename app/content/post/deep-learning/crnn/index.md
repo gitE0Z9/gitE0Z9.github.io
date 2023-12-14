@@ -1,7 +1,6 @@
 ---
 title: "Pytorch DIY — CRNN"
 description: "Convolution recurrent neural network 於 2015 由 Shi et al.提出，主要用於文字辨識或聲音事件辨識"
-slug: pytorch-DIY-crnn
 date: 2022-12-26T16:39:45.106Z
 image: "network.webp"
 author: "Mike Bai"
