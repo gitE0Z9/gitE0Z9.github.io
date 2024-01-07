@@ -2,7 +2,7 @@
 title: "Pytorch DIY — DQN"
 description: "Deep Q Learning 是由Mnih et al.(2014)提出，可以說是第一個將增強學習與深度學習結合的經典範例。"
 date: 2020-12-07T13:47:35.464Z
-image: "concept.webp"
+image: "demo.webp"
 author: "Mike Bai"
 tags:
     - reinforcement learning
@@ -18,25 +18,43 @@ Deep Q Learning 是由Mnih et al.(2014)在 *Playing Atari with Deep Reinforcemen
 
 ## 環境
 
-CartPole-v0，向左或向右使木桿不傾倒的遊戲。
+DemonAttack-v5，射擊遊戲。
+
+![遊戲畫面](demo.webp)
 
 ## 網路
 
-設計概念是經由卷積的滑窗特性達到序列建模的性質，同時藉由遮掩未來訊息達到因果(causal)性質，也就是未來不影響現在。
+策略網路負責計算當下Q值以及保存當前的權重並定期更新目標網路，目標網路則負責計算期望Q值。
 
-![網路](concept.webp)
+由於Q learning是model-agnostic的方法，因此模型可以自行選擇。
 
-## 損失函數
-
-採用Smooth L1 loss。
+![訓練流程](concept.webp)
 
 ## 訓練
 
-概念上先更新策略網路，以策略網路計算回憶的Q，目標網路計算value，隔一陣子更新目標網路。
+Q value: 行動的回饋值。
+
+Q learning: 計算期望Q值，並逐步逼近真實Q值的方法。
+
+off-policy: 增強學習常見的問題是exploration和exploitation如何取捨，DQN採取ϵ-greedy為策略，ϵ是指exploration的機率，如果隨機機率低於ϵ，則隨機選取一個行動，若高於ϵ，則使用最高Q值的行動。
 
 ## 評估
 
-訓練不是很穩定，有時最久可維持90次計數，有時又只能30次或10次。
+2分鐘內，五回合分數大致在60分左右。
+
+![評估結果](eval.webp)
+
+![DQN遊玩片段](thorough.gif)
+
+沒有採取的作法: 依優先度採樣回憶。
+
+可以改進的部分:
+
+1. agent不認為移動是當下最佳的行動，會停於某處射擊。
+
+2. agent的認知中，被擊中不會有負回饋的影響。
+
+=> 我也學會玩這遊戲了，要等子彈裝好才能發射。
 
 ## 代碼連結
 
