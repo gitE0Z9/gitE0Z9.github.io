@@ -38,10 +38,6 @@ GCN由 Kipf et al.(2016)在 *Semi-Supervised Classification with Graph Convoluti
 
 PubMed，醫學生物領域期刊資料庫，收集論文間彼此的引用關係，資料來源是Graph2Gauss，每個節點有500個特徵，共3個分類標籤。
 
-## 資料集
-
-[Covid19-tweet](https://www.kaggle.com/datasets/datatattle/covid-19-nlp-text-classification) , Kaggle上一個關於covid19推特訊息的資料集，分類標籤為情緒，共分五種: Extremely Negative, Nagative, Neutral, Positive, Extremely Positive。
-
 ## 評估
 
 **優點:**
